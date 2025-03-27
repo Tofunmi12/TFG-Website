@@ -1,0 +1,392 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FFF3E0; /* Soft Beige */
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #FF9800; /* Deep Orange */
+    padding: 10px 20px;
+    color: white;
+    text-align:left;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing between logo & text */
+    padding: 10px;
+}
+
+.logo {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+}
+
+.header-text {
+    text-align: left;
+}
+.header-text h1 {
+    font-size: 24px;
+}
+
+.header-text p {
+    font-size: 16px;
+}
+
+/* 🟢 Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: row; /* Keep side by side */
+        text-align: left;
+    }
+    .logo {
+        width: 50px;
+    }
+    .header-text h1 {
+        font-size: 20px;
+    }
+    .header-text p {
+        font-size: 14px;
+    }
+}
+
+/* 🔵 Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align items to the left */
+        gap: 8px;
+    }
+    .logo {
+        width: 45px; /* Slightly smaller logo */
+    }
+    .header-text h1 {
+        font-size: 18px;
+    }
+    .header-text p {
+        font-size: 12px;
+    }
+    header {
+        padding: 8px; /* Reduce header padding */
+    }
+}
+
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+/* Header Image Animation 
+.header-image {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Main Section */
+.home-main {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;  /* Centers vertically */
+    height: 80vh;  /* Adjust height so it stays in the center */
+    text-align: center;
+    background: url('/images/background-main.jpg') no-repeat fixed center/cover;
+    color: black;
+    font-size: larger;
+}
+
+
+
+/* Navigation Bar */
+nav {
+    background: #4CAF50; /* Green */
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Burger Menu Icon */
+.menu-toggle {
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+    display: block;
+    text-align: right;
+    transition: transform 0.3s ease-in-out;
+}
+/* Shop Now Button */
+.shop-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #FF9800; /* Deep Orange */
+    /* Bright, attractive color */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Button Hover Effect */
+.shop-btn:hover {
+    background: #E63900;
+    transform: scale(1.05);
+}
+
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    background: #4CAF50;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Menu Items */
+.nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+}
+
+/* Show menu on hover and click */
+nav:hover .nav-links,
+.nav-active {
+    display: flex;
+}
+
+nav:hover .nav-links li,
+.nav-active li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Burger Icon Animation */
+.menu-toggle.active {
+    transform: rotate(90deg);
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #FFD54F; /* Champagne Gold */
+}
+
+/* Intro Section */
+.intro {
+    padding: 40px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2em;
+    color: #FF9800;
+}
+
+/* Catalogue Page - Product Grid (2 Columns, 2 Rows per Set) */
+.catalogue {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px ;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Product Card */
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    /* width: 100%; */
+    /* max-width: 250px; */
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Product Image */
+/* Ensure uniform product image size */
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer; /* Shows hand cursor when hovering */
+}
+
+/* Modal styles (hidden by default) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 50px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #008080; /* Teal */
+}
+
+/* 🔹 Responsive for Tablets (2 per row) */
+@media screen and (max-width: 768px) {
+    .catalogue-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 🔹 Responsive for Mobile (1 per row) */
+@media screen and (max-width: 480px) {
+    .catalogue-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .product img {
+        width: 100%;  /* Ensures full width within the product card */
+        height: 100px; /* Set a fixed height for uniformity */
+        object-fit: cover; /* Ensures the image fills the area without distortion */
+        border-radius: 5px;
+    }
+    
+}
+/* Product Price */
+/* .price {
+    font-size: 1.2em;
+    color: #E63900;
+    font-weight: bold;
+    margin: 10px 0;
+} */
+
+/* Buy Now Button */
+.product button {
+    padding: 10px 15px;
+    background: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1em;
+}
+
+.product button:hover {
+    background: #E63900;
+}
+
+/* "See More" Button */
+#see-more {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+#see-more:hover {
+    background: #005F73;
+}
+
+
+/* Footer */
+footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}

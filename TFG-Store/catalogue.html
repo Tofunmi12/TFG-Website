@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFG - Shop Now</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Shop Gallery</h1>
+    </header>
+
+    <nav>
+        
+                <ul>
+            <li><a href="index.html">Return home</a></li>
+            
+        </ul>
+    </nav>
+
+   
+    <main>
+        <h2>Our Products</h2>
+        <div id="product-container" class="catalogue">
+             <!-- Product Items -->
+             <div class="product">
+                <img src="/images/product1.jpg" alt="Product 1">
+           
+                <button  class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product2.jpg" alt="Product 2">
+              
+                <button onclick="orderNow('Product Name 2')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product3.jpg" alt="Product 3">
+               
+                <button onclick="orderNow('Product Name 3')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product4.jpg" alt="Product 4">
+                
+                
+                <button onclick="orderNow('Product Name 4')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product5.jpg" alt="Product 5">
+                
+                <button onclick="orderNow('Product Name 5')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product6.jpg" alt="Product 6">
+                
+                <button onclick="orderNow('Product Name 6')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product7.jpg" alt="Product 7">
+                
+                <button onclick="orderNow('Product Name 7')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product8.jpg" alt="Product 8">
+               
+                
+                <button onclick="orderNow('Product Name 8')">Buy Now</button>
+            </div>
+            <div class="hidden-products">
+            <div class="product">
+                <img src="/images/product9.jpg" alt="Product 9">
+                
+                
+                <button onclick="orderNow('Product Name 9')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product10.jpg" alt="Product 10">
+                
+              
+                <button onclick="orderNow('Product Name 10')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product11.jpg" alt="Product 11">
+              
+                
+                <button onclick="orderNow('Product Name 11')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product12.jpg" alt="Product 12">
+                
+                <button onclick="orderNow('Product Name 12')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product13.jpg" alt="Product 13">
+              
+                <button onclick="orderNow('Product Name 13')">Buy Now</button>
+            </div>
+            
+            <div class="product">
+                <img src="/images/product14.jpg" alt="Product 14">
+                
+                
+                <button onclick="orderNow('Product Name 14')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product15.jpg" alt="Product 15">
+                
+            
+                <button onclick="orderNow('Product Name 15')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product16.jpg" alt="Product 16">
+                
+                
+                <button onclick="orderNow('Product Name 16')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product17.jpg" alt="Product 17">
+               
+              
+                <button onclick="orderNow('Product Name 17')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product18.jpg" alt="Product 18">
+                
+               
+                <button onclick="orderNow('Product Name 18')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product19.jpeg" alt="Product 19">
+                
+                
+                <button onclick="orderNow('Product Name 19')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="/images/product20.jpg" alt="Product 20">
+               
+                <button onclick="orderNow('Product Name 20')">Buy Now</button>
+            </div>
+        </div>
+            <!-- Add More Products Up to 20 -->
+            <!-- Copy the "product" div and update image, name, and price -->
+
+            <!-- Products will be loaded dynamically using JavaScript -->
+        </div>
+        <!-- Image Modal -->
+
+<div id="imageModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img id="fullImage" class="modal-content">
+</div>
+
+
+        <!-- "See More" Button -->
+<button id="see-more" onclick="showHiddenProducts()">See More</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TFG Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
